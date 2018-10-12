@@ -1,14 +1,13 @@
 //
-//  User.swift
+//  Followers.swift
 //  Cinneco
 //
-//  Created by Asher Ahsan on 22/10/2017.
-//  Copyright © 2017 Asher Ahsan. All rights reserved.
+//  Created by Syed  Rafay on 11/10/2018.
+//  Copyright © 2018 Asher Ahsan. All rights reserved.
 //
 
 import Foundation
-
-class User {
+class Followers {
     private var id: String!
     private var username: String!
     private var fullname: String!
@@ -123,8 +122,8 @@ class User {
             self.watchlist = nil
         }
         
-        if data["bio"] != nil {
-            self.description = data["bio"] as? String
+        if data["description"] != nil {
+            self.description = data["description"] as? String
         } else {
             self.description = "User doesn't have provided a description yet"
         }

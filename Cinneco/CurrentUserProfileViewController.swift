@@ -16,6 +16,7 @@ class CurrentUserProfileViewController: UIViewController, UITableViewDelegate, U
     @IBOutlet weak var pageMenuView: UIView!
     @IBOutlet weak var WatchedBtnOutlet: UIButton!
     @IBOutlet weak var WatchListBtnOutlet: UIButton!
+    @IBOutlet weak var locationLabel: UILabel!
     
     
 //    var pageMenu: CAPSPageMenu?
@@ -27,6 +28,9 @@ class CurrentUserProfileViewController: UIViewController, UITableViewDelegate, U
     @IBOutlet weak var followingLbl: UILabel!
     @IBOutlet weak var followersLbl: UILabel!
    
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userDesc: UILabel!
     
     var currentUser: User!
     
@@ -36,13 +40,15 @@ class CurrentUserProfileViewController: UIViewController, UITableViewDelegate, U
     
     var button_index = 0
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideData()
         tableView.delegate = self
         tableView.dataSource = self
-//        getCurrentUser()
-        
+        getCurrentUser()
+        self.tableView.isScrollEnabled = false
         tableView.tableFooterView = UIView()
         
         getWatchedMovies()
@@ -110,7 +116,8 @@ class CurrentUserProfileViewController: UIViewController, UITableViewDelegate, U
                     let data = value as! [String: AnyObject]
                     let movie = Movie(data: data)
                     self.watchlistMoviesArray.append(movie)
-                    self.tableView.reloadData()
+//                    self.tableView.reloadData()
+                    self.tableView.isScrollEnabled = true
                     //                    self.watchlistCarousel.reloadData()
                     //                    self.stopSpinner(spinner: self.spinner2, carousel: self.watchedCarousel)
                 }
@@ -215,6 +222,30 @@ class CurrentUserProfileViewController: UIViewController, UITableViewDelegate, U
         } else {
             followersLbl.text = "0"
         }
+        
+        if let Name = user.getFullname as? String{
+            self.userName.text = Name
+        }else{
+            self.userName.text = ""
+        }
+        
+        if let Name = user.getDescription as? String{
+            self.userDesc.text = Name
+        }else{
+            self.userDesc.text = ""
+        }
+        if let Name = user.getLocation as? String{
+            self.locationLabel.text = Name
+        }else{
+            self.locationLabel.text = ""
+        }
+        if let Name = user.getEmail as? String{
+            self.emailLabel.text = Name
+        }else{
+            self.emailLabel.text = ""
+        }
+        
+        self.showData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -261,7 +292,7 @@ class CurrentUserProfileViewController: UIViewController, UITableViewDelegate, U
         
         //        self.communityTableView.reloadData()
         
-        tableView.reloadData()
+//        tableView.reloadData()
     
     }
     
@@ -280,7 +311,9 @@ class CurrentUserProfileViewController: UIViewController, UITableViewDelegate, U
             WatchedBtnOutlet.setTitleColor(UIColor.white, for: .normal)
             viewWithTag.removeFromSuperview()
         }
-        tableView.reloadData()
+                            self.tableView.reloadData()
+
+//        tableView.reloadData()
     }
     
     
@@ -348,5 +381,25 @@ class CurrentUserProfileViewController: UIViewController, UITableViewDelegate, U
 //        return  138
 //    }
     
+    func showData() {
+        UIView.animate(withDuration: 1) {
+            self.userName.isHidden = false
+            self.userDesc.isHidden = false
+            self.locationLabel.isHidden = false
+            self.emailLabel.isHidden = false
+        }
+       
+    }
     
+    
+    func hideData() {
+        UIView.animate(withDuration: 0.5) {
+            self.userName.isHidden = true
+            self.userDesc.isHidden = true
+            self.locationLabel.isHidden = true
+            self.emailLabel.isHidden = true
+        }
+        
+    }
 }
+

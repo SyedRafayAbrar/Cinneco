@@ -116,7 +116,7 @@ class EditProfileViewController: UIViewController, UITextViewDelegate {
     // Save profile to firebase
     func saveProfile() {
         self.startSpinner()
-                let profileData = ["bio": "\(name_label.text!)", "website": "\(webiste_textfeild.text!)", "location": "\(location_textfeild.text!)" , "imageURL": "\(imageStorageURL!)"]
+        let profileData = ["bio": "\(text_area.text!)", "website": "\(webiste_textfeild.text!)", "location": "\(location_textfeild.text!)" , "imageURL": "\(imageStorageURL!)"]
         
         print("Dic to upload \(profileData)")
         

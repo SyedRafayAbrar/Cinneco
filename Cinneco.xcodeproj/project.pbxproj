@@ -104,6 +104,7 @@
 		BDE58AB31FAE36CF00A12EC6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE58AB21FAE36CF00A12EC6 /* SettingsViewController.swift */; };
 		BDF707691FB63A38005B8B52 /* FollowFbFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF707681FB63A38005B8B52 /* FollowFbFriendsViewController.swift */; };
 		BDFB3B70209DD1DF00A54F3D /* PageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFB3B6F209DD1DF00A54F3D /* PageViewCell.swift */; };
+		C8A1B537216FCE6F00313E17 /* Followers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A1B536216FCE6F00313E17 /* Followers.swift */; };
 		EA5F6BDEF54FC54D9C36D692 /* Pods_Cinneco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D838D890D2B731F416B360AC /* Pods_Cinneco.framework */; };
 /* End PBXBuildFile section */
 
@@ -236,6 +237,7 @@
 		BDE58AB21FAE36CF00A12EC6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BDF707681FB63A38005B8B52 /* FollowFbFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowFbFriendsViewController.swift; sourceTree = "<group>"; };
 		BDFB3B6F209DD1DF00A54F3D /* PageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewCell.swift; sourceTree = "<group>"; };
+		C8A1B536216FCE6F00313E17 /* Followers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Followers.swift; sourceTree = "<group>"; };
 		D838D890D2B731F416B360AC /* Pods_Cinneco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cinneco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -405,6 +407,7 @@
 				BDF707681FB63A38005B8B52 /* FollowFbFriendsViewController.swift */,
 				BDDC22852091E6A600AB0F23 /* ReviewViewController.swift */,
 				381ECC00209133D900020872 /* FollowingViewController.swift */,
+				C8A1B536216FCE6F00313E17 /* Followers.swift */,
 				BDDC228F20934BB600AB0F23 /* OptionViewController.swift */,
 				BD9DAE6E20935A3E00E96C54 /* EditProfileViewController.swift */,
 				BDBD2D8020A6F0A600164D79 /* ActorViewController.swift */,
@@ -790,6 +793,7 @@
 				BD3F9D071F9CD8560016E2EC /* UserTableViewCell.swift in Sources */,
 				BD316F961F86A169009316FF /* SuggestedMovieCollectionViewCell.swift in Sources */,
 				BD1519671FA4E5CA00B1F340 /* Actor.swift in Sources */,
+				C8A1B537216FCE6F00313E17 /* Followers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

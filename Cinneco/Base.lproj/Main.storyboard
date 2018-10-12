@@ -3778,7 +3778,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEv-jG-2AJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="161.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterSample" translatesAutoresizingMaskIntoConstraints="NO" id="dQc-Ao-o3f">
                                                             <rect key="frame" x="20" y="14" width="80" height="110"/>
@@ -4023,10 +4023,14 @@
                     <connections>
                         <outlet property="WatchListBtnOutlet" destination="gmc-IG-kYH" id="CKJ-Zb-jbT"/>
                         <outlet property="WatchedBtnOutlet" destination="sli-UD-tAt" id="EHt-wA-ajI"/>
+                        <outlet property="emailLabel" destination="Qbe-g5-0i8" id="ada-zT-iLI"/>
                         <outlet property="followersLbl" destination="LrZ-Et-pJO" id="HIv-Fn-1UW"/>
                         <outlet property="followingLbl" destination="lNC-K6-duR" id="ogb-Px-8UW"/>
+                        <outlet property="locationLabel" destination="ily-dg-lu9" id="bKG-RY-rwb"/>
                         <outlet property="profileImgView" destination="Ba5-Pq-HS0" id="i3D-aI-CoQ"/>
                         <outlet property="tableView" destination="P05-4u-GUF" id="edG-OS-iIi"/>
+                        <outlet property="userDesc" destination="CHg-ux-1Ql" id="8uI-b2-15r"/>
+                        <outlet property="userName" destination="dsM-ZN-FZg" id="P7Y-WM-ecf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBW-M0-uP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
